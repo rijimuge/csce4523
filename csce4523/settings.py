@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'students.apps.StudentsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,10 +74,16 @@ WSGI_APPLICATION = 'csce4523.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'djltme5q58sh0',
+        'USER': 'rjaiajfvgquznk',
+        'PASSWORD': 'dd3acbd65e1a55f20a7e02eba2902f849ca3e4d90932b69b9d79d08c8bbbd043',
+        'HOST': 'ec2-52-86-73-86.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

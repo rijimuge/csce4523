@@ -167,7 +167,7 @@ def add_enrollment(request):
 
             new_enrollment = Enrollment(enrollment_id, student_id, course_id)
             new_enrollment.save()
-            return HttpResponseRedirect('/students/list_enrollments/' + str(student_id))
+            return HttpResponseRedirect('/students/list_enrollments_detail/' + str(student_id))
 
     else:
         form = EnrollmentForm()
